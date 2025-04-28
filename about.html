@@ -1,0 +1,64 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="About">
+    <title> about </title>
+    <style>
+        body {
+            background-color: rgb(168, 135, 199);
+            font-family: 'Times New Roman', Times, serif;
+            color: aliceblue;
+            margin-top: 100px;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-bottom: 100px;
+            line-height: 1.5;
+        }
+
+        .flower {
+            position: fixed;
+            top: -50px;
+            font-size: 24px;
+            animation: floatDown linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes floatDown {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        1. kkotshin
+    </h2>
+    <h4>
+        꽃무늬나 여러 가지 색깔을 넣어 예쁘게 장식한 신발.
+
+    </h4>
+    <h4>
+        floral shoes: Shoes that are decorated beautifully with floral patterns or different multiple colors.
+    </h4>
+    <script>
+        const flowerCount = 50;
+        const flowerEmojis = ['🪷', '🪻', '🌺', '🌼', '❁'];
+        for (let i = 0; i < flowerCount; i++) {
+            const flower = document.createElement('div');
+            flower.className = 'flower';
+            flower.textContent = flowerEmojis[Math.floor(Math.random() * flowerEmojis.length)];
+
+            flower.style.left = `${Math.random() * 100}vw`;
+            flower.style.animationDuration = `${8 + Math.random() * 7}s`;
+            flower.style.fontSize = `${15 + Math.random() * 15}px`;
+            document.body.appendChild(flower);
+        }
+    </script>
+</body>
