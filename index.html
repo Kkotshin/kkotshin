@@ -1,0 +1,197 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About">
+    <title>About</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(16, 0, 192);
+            margin-top: 100px;
+            text-align: center;
+
+            padding: 0;
+
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 8px;
+            padding: 10px 0;
+            background-color: white;
+
+        }
+
+        #photobooth {
+            width: 100px;
+            object-fit: cover;
+            object-position: center;
+
+            padding: 0;
+
+        }
+
+        #feet,
+        #ap,
+        #kinglear,
+        #matariki {
+            width: 150px;
+
+            object-fit: cover;
+            object-position: bottom;
+            margin-bottom: 0;
+            padding: 0;
+        }
+
+
+        #feet:hover {
+            animation-name: spin;
+            animation-duration: 350ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        #ap:hover {
+            animation: bounce 0.6s ease infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+
+        #kinglear:hover {
+            animation: slideSideToSide 0.5s ease-in-out infinite;
+        }
+
+        @keyframes slideSideToSide {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(30px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+
+        #matariki:hover {
+            animation: glitchEffect 0.5s infinite;
+        }
+
+        @keyframes glitchEffect {
+            0% {
+                transform: translate(0, 0);
+                filter: hue-rotate(0deg) contrast(100%);
+            }
+
+            10% {
+                transform: translate(-2px, 2px);
+                filter: hue-rotate(20deg) contrast(150%);
+            }
+
+            20% {
+                transform: translate(2px, -2px);
+                filter: hue-rotate(-20deg) contrast(90%);
+            }
+
+            30% {
+                transform: translate(-1px, 1px);
+                filter: hue-rotate(45deg) contrast(120%);
+            }
+
+            40% {
+                transform: translate(1px, -1px);
+                filter: hue-rotate(-45deg) contrast(110%);
+            }
+
+            50% {
+                transform: translate(3px, 0);
+                filter: hue-rotate(90deg) contrast(200%);
+            }
+
+            60% {
+                transform: translate(-3px, 2px);
+                filter: hue-rotate(180deg) contrast(80%);
+            }
+
+            70% {
+                transform: translate(2px, -2px);
+                filter: hue-rotate(270deg) contrast(130%);
+            }
+
+            80% {
+                transform: translate(-2px, 1px);
+                filter: hue-rotate(360deg) contrast(100%);
+            }
+
+            100% {
+                transform: translate(0, 0);
+                filter: hue-rotate(0deg) contrast(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Hello, I'm Kkotshin Im!
+    </h1>
+    <p>
+        (❁ᴗ͈ˬᴗ͈)◞
+    </p>
+    <div class="topnav">
+        <a href="about.html">About</a>
+        <a href="archives">Archive</a>
+        <a href="Photobooth.html">
+            <img id="Photobooth" src="photobooth.png" alt="Click to visit Photobooth">
+        </a>
+        <a href="#texts">Texts</a>
+
+        <a href="https://google.com">Contact
+        </a>
+    </div>
+
+
+
+    <footer>
+        <img id="feet" src="feet.png" alt="Feet Image">
+        <img id="ap" src="APkkotshin.png" alt="AP Image">
+        <img id="kinglear" src="kinglear.png" alt="King Lear Image">
+        <img id="matariki" src="matariki.png" alt="Matariki Image">
+    </footer>
+</body>
+
+</html>
